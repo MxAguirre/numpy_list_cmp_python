@@ -36,13 +36,19 @@ if __name__ == '__main__':
     padron = ['A', 'E', 'J', 'T']
 
     nombres = ['Tamara', 'Marcelo', 'Martin', 'Juan', 'Alberto', 'Exequiel',
-               'Alejandro', 'Leonel', 'Antonio', 'Omar', 'Antonia', 'Amalia',
-               'Daniela', 'Sofia', 'Celeste', 'Ramon', 'Jorgelina', 'Anabela']
+                'Alejandro', 'Leonel', 'Antonio', 'Omar', 'Antonia', 'Amalia',
+                'Daniela', 'Sofia', 'Celeste', 'Ramon', 'Jorgelina', 'Anabela']
 
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
 
     # Se espera obtener:
     # ['Tamara', 'Juan', 'Alberto'......]
+
+    nombres_filtrados = []
+    for letra in padron:
+        nombres_por_letra = [nombre for nombre in nombres if letra == nombre[0]]
+        nombres_filtrados = nombres_filtrados + nombres_por_letra
+    print(nombres_filtrados)
 
     print("terminamos")

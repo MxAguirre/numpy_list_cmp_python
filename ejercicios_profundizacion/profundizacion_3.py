@@ -45,6 +45,7 @@ de una base de datos como veran más adelante.
 Tambien se lo conoce como el proceso de transformar variable numéricas en categóricas
 en análisis de datos.
 '''
+import requests
 
 if __name__ == '__main__':
     print("Acercamiento al uso de datos relacionales")
@@ -56,8 +57,10 @@ if __name__ == '__main__':
                 1264: 'Bicicleta',
                 905045: 'Computadora',
                 }
-
     lista_compra_id = [556070, 905045, 42135, 5674, 704060, 1264, 42135, 3654]
+
+    lista_compra_productos = [producto.get(x, "NaN") for x in lista_compra_id]
+    print(lista_compra_productos)
 
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
